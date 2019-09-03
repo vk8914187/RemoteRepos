@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+<html >
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+{% block containt %}
+    <style>
+    body{
+        background-color: skyblue;
+    }
+
+    th,td{
+        text-align: center;
+        padding: 10px 20px;
+    }
+    th{
+        color: red;
+    }
+
+    </style>
+
+    {% if services %}
+        <center>
+        <table border="6px">
+        <thead>
+        <tr>
+            <th>Course ID</th>
+            <th>Course Name</th>
+            <th>Course Duration</th>
+            <th>Course Start Date</th>
+            <th>Course Start Time</th>
+            <th>Course Trainer Name</th>
+            <th>Course Trainer Exp</th>
+        </tr>
+        </thead>
+        {% for i in services %}
+            <tbody>
+            <tr>
+                <td>{{ i.course_id }}</td>
+                <td>{{ i.course_name }}</td>
+                <td>{{ i.course_duration }}</td>
+                <td>{{ i.course_start_date }}</td>
+                <td>{{ i.course_start_time }}</td>
+                <td>{{ i.course_trainer_name }}</td>
+                <td>{{ i.course_trainer_exp }}</td>
+            </tr>
+            </tbody>
+        {% endfor %}
+        </table>
+        </center>
+    {% else %}
+        <h2>No Services Are Available</h2>
+    {% endif %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>Gallery Page</title>
+</head>
+<body>
+{% block containt %}
+    <style>
+    body{
+        background-color: #3875d7;
+    }
+    </style>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'images/first_ganeshji2015.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/ganesh withrahul.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/jal.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+
+    </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="col-md-4">
+            <img src="{% static 'images/2018group.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/ganeshjibhandara.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/group2018.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        <div class="col-md-4">
+            <img src="{% static 'images/ganeshjiwithgroup.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        <div class="col-md-4">
+            <img src="{% static 'images/ganeshmembers.jpg' %}" style="width: 100%; height: 50%">
+        </div>
+        
+    </div>
+    </div>
+{% endblock %}
+
+</body>
+</html>
